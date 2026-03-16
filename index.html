@@ -326,7 +326,128 @@
             width: 400px;
             height: 600px;
             z-index: -1;
-            
+
+        }
+
+        /* ── iOS / Mobile ───────────────────────────────────────── */
+
+        /* Prevent iOS font inflation */
+        html {
+            -webkit-text-size-adjust: 100%;
+        }
+
+        /* iOS safe area padding */
+        body {
+            padding-bottom: env(safe-area-inset-bottom);
+        }
+
+        /* Smooth momentum scroll on iOS */
+        .main-stage {
+            -webkit-overflow-scrolling: touch;
+        }
+
+        /* Prevent double-tap zoom on links/nav */
+        a, .nav-item {
+            touch-action: manipulation;
+        }
+
+        @media (max-width: 768px) {
+
+            /* Hide rulers and chrome — too small to read, take up space */
+            .ruler-x,
+            .ruler-y,
+            .corner-piece,
+            .active-cell-indicator,
+            .coordinates-display {
+                display: none !important;
+            }
+
+            /* Grid layer fills full viewport without ruler offsets */
+            .grid-layer {
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+
+            /* Remove ruler margins from main stage */
+            .main-stage {
+                margin-top: 0 !important;
+                margin-left: 0 !important;
+                width: 100% !important;
+                padding: 60px 16px 40px !important;
+            }
+
+            /* Nav — smaller, still fixed top-right, touch-friendly */
+            nav {
+                top: 10px !important;
+                right: 10px !important;
+            }
+
+            .nav-item {
+                height: 44px !important;
+                line-height: 44px !important;
+                padding: 0 14px !important;
+                font-size: 11px !important;
+            }
+
+            /* All cards full-width, no offset margins */
+            .content-card {
+                max-width: 100% !important;
+                width: 100% !important;
+                margin-left: 0 !important;
+                margin-right: 0 !important;
+                margin-bottom: 16px !important;
+            }
+
+            /* Stack all flex rows */
+            .main-stage > section > div[style*="display: flex"],
+            .main-stage > section > div > div[style*="display: flex"] {
+                flex-direction: column !important;
+                margin-left: 0 !important;
+                width: 100% !important;
+                gap: 0 !important;
+            }
+
+            /* Section wrappers full-width */
+            .main-stage > section > div {
+                margin-left: 0 !important;
+                width: 100% !important;
+            }
+
+            /* Engagement model table — allow horizontal scroll */
+            .project-grid {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+                display: block;
+            }
+
+            .project-row {
+                min-width: 480px;
+            }
+
+            /* Typography scale-down */
+            h2 {
+                font-size: 22px !important;
+                line-height: 32px !important;
+            }
+
+            /* Meta row in hero — stack vertically */
+            .content-card > div[style*="display: flex"] {
+                flex-direction: column !important;
+                gap: 12px !important;
+            }
+
+            /* Phase detail cards — full width in flex column */
+            .content-card[style*="flex: 1"] {
+                flex: unset !important;
+                width: 100% !important;
+            }
+
+            /* Pixel art — suppress on mobile, saves paint */
+            #pixelContainer {
+                display: none !important;
+            }
         }
 
     </style>
