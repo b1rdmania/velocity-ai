@@ -20,6 +20,10 @@
             cursor: crosshair;
         }
 
+        html {
+            scroll-behavior: smooth;
+        }
+
         body {
             margin: 0;
             padding: 0;
@@ -339,10 +343,10 @@
 
     
     <nav vid="13">
-        <a href="#" class="nav-item" vid="14">Overview [A]</a>
-        <a href="#" class="nav-item" vid="15">Services [B]</a>
-        <a href="#" class="nav-item" vid="16">Work [C]</a>
-        <a href="#" class="nav-item" vid="17">Contact [D]</a>
+        <a href="#overview" class="nav-item" vid="14">Overview [A]</a>
+        <a href="#services" class="nav-item" vid="15">Services [B]</a>
+        <a href="#work" class="nav-item" vid="16">Work [C]</a>
+        <a href="#contact" class="nav-item" vid="17">Contact [D]</a>
     </nav>
 
     
@@ -353,7 +357,8 @@
     
     <div class="main-stage" vid="19">
 
-        
+        <!-- OVERVIEW -->
+        <section id="overview">
         <div class="content-card" style="max-width: 600px; margin-left: calc(var(--cell-size) * 4); margin-top: calc(var(--cell-size) * 4);" vid="20">
             <div class="pixel-logo" vid="21">
                 <div class="px" vid="22"></div><div class="px" vid="23"></div><div class="px" vid="24"></div><div class="px" vid="25"></div><div class="px" vid="26"></div>
@@ -368,25 +373,30 @@
             <h2 vid="49">We make legacy enterprise infrastructure Claude-ready. No rip-and-replace.</h2>
             <br vid="50">
             <p style="font-size: 13px; line-height: 20px; margin: 0 0 20px 0; max-width: 45ch; color: #444;">For mid-market companies in recruitment, fintech, and professional services running on systems from 2010–2018. AI ROI in 90 days, not 2 years.</p>
-            <div style="display: flex; gap: 20px;" vid="51">
+            <div style="display: flex; gap: 40px;" vid="51">
                 <div vid="52">
                     <span class="meta-data" vid="53">BASE</span>
                     <p vid="54">London, UK</p>
                 </div>
                 <div vid="56">
                     <span class="meta-data" vid="57">STATUS</span>
-                    <p vid="58">Taking<br vid="59">Engagements</p>
+                    <p vid="58">Taking Engagements</p>
                 </div>
                 <div>
                     <span class="meta-data">PROJECTS FROM</span>
                     <p>£50k</p>
                 </div>
             </div>
+            <br>
+            <p class="u-mono" style="font-size: 12px; margin: 0;"><a href="#services" style="color: inherit; text-decoration: none;">-&gt; VIEW ENGAGEMENT MODEL</a></p>
         </div>
+        </section>
 
-        
+        <!-- SERVICES -->
+        <section id="services">
         <div class="content-card" style="margin-left: calc(var(--cell-size) * 12); width: calc(100% - var(--cell-size) * 16);" vid="60">
             <h1 vid="61">Engagement Model</h1>
+            <p style="font-size: 13px; line-height: 20px; margin: 0 0 20px 0; max-width: 60ch; color: #444;">A fixed three-phase engagement. No retainers, no open-ended scope. Total timeline: 10–17 weeks.</p>
 
             <div class="project-grid" vid="62">
 
@@ -416,57 +426,72 @@
             </div>
         </div>
 
-        
-        <div style="display: flex; gap: calc(var(--cell-size) * 2); margin-left: calc(var(--cell-size) * 2); margin-bottom: calc(var(--cell-size) * 3);">
-
-            <div class="content-card" style="max-width: 400px; margin-bottom: 0;" vid="87">
-                <h1 vid="88">Approach</h1>
-                <p vid="89">We don't modernise your stack. We wire AI into what you already have. Most legacy systems from 2010–2018 have enough surface area to support Claude integration today. We find those points, build the adapters, and hand off systems your team can run.</p>
-                <br vid="90">
-                <p class="u-mono" vid="91">-&gt; VIEW ENGAGEMENT MODEL</p>
+        <div style="display: flex; gap: calc(var(--cell-size) * 2); margin-left: calc(var(--cell-size) * 4); width: calc(100% - var(--cell-size) * 8);">
+            <div class="content-card" style="flex: 1; margin-bottom: 0;">
+                <span class="meta-data">PHASE 01</span>
+                <h1>System Archaeology</h1>
+                <p>We audit your existing stack — databases, APIs, internal tools, data flows. Output is an Insertion Map: a prioritised list of AI attachment points ranked by ROI and implementation risk.</p>
+                <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">Deliverable: Insertion Map + technical brief</p>
             </div>
+            <div class="content-card" style="flex: 1; margin-bottom: 0;">
+                <span class="meta-data">PHASE 02</span>
+                <h1>AI Integration Layer</h1>
+                <p>We build Claude/LLM adapters for your existing systems. Your legacy stack stays in place — we add an intelligence layer on top. Typically covers 2–4 high-value insertion points.</p>
+                <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">Deliverable: Production adapters + test suite</p>
+            </div>
+            <div class="content-card" style="flex: 1; margin-bottom: 0;">
+                <span class="meta-data">PHASE 03</span>
+                <h1>Internal Deployment</h1>
+                <p>We deploy to your environment, train your team, and hand off documentation. You own everything. 30 days post-handoff support included — then you run it independently.</p>
+                <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">Deliverable: Live system + runbook + team training</p>
+            </div>
+        </div>
+        </section>
 
-            <div class="content-card" style="max-width: 360px; margin-bottom: 0;">
-                <h1>Selected Work</h1>
-                <div class="project-grid">
-                    <div class="project-row">
-                        <div class="p-cell p-header">Client</div>
-                        <div class="p-cell p-header">Sector</div>
-                        <div class="p-cell p-header" style="border-right: none;">Year</div>
-                    </div>
-                    <div class="project-row">
-                        <div class="p-cell">VerifyUS</div>
-                        <div class="p-cell">Recruitment</div>
-                        <div class="p-cell u-mono" style="border-right: none;">2024</div>
-                    </div>
-                    <div class="project-row">
-                        <div class="p-cell">GhostClaw</div>
-                        <div class="p-cell">Infrastructure</div>
-                        <div class="p-cell u-mono" style="border-right: none;">2024</div>
-                    </div>
-                </div>
+        <!-- WORK -->
+        <section id="work">
+        <div style="display: flex; gap: calc(var(--cell-size) * 2); margin-left: calc(var(--cell-size) * 12); width: calc(100% - var(--cell-size) * 16);">
+            <div class="content-card" style="flex: 1; margin-bottom: 0;">
+                <span class="meta-data">CLIENT // 2024</span>
+                <h1>VerifyUS</h1>
+                <p>Claude-powered social proof analysis for a recruitment platform. Surfaces candidate credibility signals from unstructured reference data, integrated into the existing ATS with zero workflow disruption.</p>
+                <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">Sector: Recruitment &nbsp;|&nbsp; Stack: Legacy ATS + Claude API</p>
+            </div>
+            <div class="content-card" style="flex: 1; margin-bottom: 0;">
+                <span class="meta-data">INTERNAL // 2024</span>
+                <h1>GhostClaw</h1>
+                <p>Personal AI infrastructure demonstrating production-grade deployment patterns. A live system handling real workloads — not a demo. Shows we build things that run, not slide decks about things that could.</p>
+                <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">Type: Internal Infrastructure &nbsp;|&nbsp; Stack: Claude API + custom tooling</p>
+            </div>
+        </div>
+        <div style="margin-left: calc(var(--cell-size) * 12); width: calc(100% - var(--cell-size) * 16); padding: 10px 0; border-bottom: 1px solid var(--grid-line);">
+            <p class="u-mono" style="font-size: 12px; color: #666; margin: 0;">We've shipped AI systems in production. Most consultancies haven't. &nbsp;<a href="#contact" style="color: inherit;">-&gt; WORK WITH US</a></p>
+        </div>
+        </section>
+
+        <!-- CONTACT -->
+        <section id="contact">
+        <div style="display: flex; gap: calc(var(--cell-size) * 2); margin-left: calc(var(--cell-size) * 4); width: calc(100% - var(--cell-size) * 8);">
+            <div class="content-card" style="flex: 2;">
+                <h1>Contact</h1>
+                <h2>Start with a scoping call. We'll tell you within 48 hours if your stack is a fit.</h2>
+                <p>We work with mid-market companies (50–500 employees) in recruitment, fintech, and professional services. If you're running legacy systems and want to know what's possible, that's the conversation to start with.</p>
                 <br>
-                <p style="font-size: 12px; line-height: 20px; margin: 0; max-width: 45ch; color: #666; font-family: var(--font-mono);">We've shipped AI systems in production. Most consultancies haven't.</p>
+                <p class="u-mono"><a href="mailto:hello@velocityai.co" style="color: inherit; text-decoration: none;">-&gt; hello@velocityai.co</a></p>
             </div>
-
-        </div>
-
-        <div class="content-card" style="max-width: 500px; margin-left: calc(var(--cell-size) * 14);">
-            <h1>Contact</h1>
-            <h2 style="font-size: 20px; line-height: 40px; margin: 0 0 20px 0; font-weight: 400; letter-spacing: -0.5px;">Start with a scoping call. We'll tell you within 48 hours if your stack is a fit.</h2>
-            <div style="display: flex; gap: 20px;">
-                <div>
-                    <span class="meta-data">EMAIL</span>
-                    <p><a href="mailto:hello@velocityai.co" style="color: inherit; text-decoration: none;">hello@velocityai.co</a></p>
+            <div class="content-card" style="flex: 1;">
+                <h1>Fit Check</h1>
+                <div style="margin-bottom: 20px;">
+                    <span class="meta-data">GOOD FIT</span>
+                    <p style="font-size: 12px; line-height: 20px; margin: 0;">Mid-market B2B, 50–500 staff<br>Systems built 2010–2018<br>Budget £50k–£250k<br>Want results in 90 days</p>
                 </div>
                 <div>
-                    <span class="meta-data">BUDGET</span>
-                    <p>£50k – £250k<br>per engagement</p>
+                    <span class="meta-data">NOT A FIT</span>
+                    <p style="font-size: 12px; line-height: 20px; margin: 0;">Greenfield SaaS startups<br>Want to replace their stack<br>Need ongoing retainer work</p>
                 </div>
             </div>
-            <br>
-            <p class="u-mono">-&gt; BOOK SCOPING CALL</p>
         </div>
+        </section>
 
     </div>
 
